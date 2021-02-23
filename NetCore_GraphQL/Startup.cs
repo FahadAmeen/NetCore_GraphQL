@@ -1,16 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NetCore_GraphQL.Data;
+using NetCore_GraphQL.Repositories;
 
 namespace NetCore_GraphQL
 {
@@ -26,11 +22,13 @@ namespace NetCore_GraphQL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<MyDbContext>(options =>
+                options.UseSqlServer(Configuration["ConnectionStrings:NetCore-GraphQL"]));
+            services.AddScoped<ProductRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NetCore_GraphQL", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "NetCore_GraphQL", Version = "v1"});
             });
         }
 
@@ -50,10 +48,7 @@ namespace NetCore_GraphQL
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
