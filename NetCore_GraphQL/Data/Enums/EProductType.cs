@@ -1,6 +1,6 @@
 ﻿namespace NetCore_GraphQL.Data.Enums
 {
-    public enum ProductType
+    public enum EProductType
     {
         Boots,
         ClimbingGear,

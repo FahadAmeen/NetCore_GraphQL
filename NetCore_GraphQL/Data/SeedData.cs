@@ -17,7 +17,7 @@ namespace NetCore_GraphQL.Data
                     Description = "Use these sturdy shoes to pass any mountain range with ease.",
                     Price = 219.5m,
                     Rating = 4,
-                    Type = ProductType.Boots,
+                    Type = EProductType.Boots,
                     Stock = 12,
                     PhotoFileName = "shutterstock_66842440.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -29,7 +29,7 @@ namespace NetCore_GraphQL.Data
                     Description = "For your everyday marches in the army.",
                     Price = 125.9m,
                     Rating = 3,
-                    Type = ProductType.Boots,
+                    Type = EProductType.Boots,
                     Stock = 56,
                     PhotoFileName = "shutterstock_222721876.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -41,7 +41,7 @@ namespace NetCore_GraphQL.Data
                     Description = "This backpack can survive any tornado.",
                     Price = 199.99m,
                     Rating = 5,
-                    Type = ProductType.ClimbingGear,
+                    Type = EProductType.ClimbingGear,
                     Stock = 66,
                     PhotoFileName = "shutterstock_6170527.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -53,7 +53,7 @@ namespace NetCore_GraphQL.Data
                     Description = "Anything you need to climb the mount Everest.",
                     Price = 299.5m,
                     Rating = 5,
-                    Type = ProductType.ClimbingGear,
+                    Type = EProductType.ClimbingGear,
                     Stock = 3,
                     PhotoFileName = "shutterstock_48040747.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -65,7 +65,7 @@ namespace NetCore_GraphQL.Data
                     Description = "Simply the fastest kayak on earth and beyond for 2 persons.",
                     Price = 350m,
                     Rating = 5,
-                    Type = ProductType.Kayaks,
+                    Type = EProductType.Kayaks,
                     Stock = 8,
                     PhotoFileName = "shutterstock_441989509.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
@@ -77,7 +77,7 @@ namespace NetCore_GraphQL.Data
                     Description = "One person kayak with hyper boost button.",
                     Price = 450m,
                     Rating = 2,
-                    Type = ProductType.Kayaks,
+                    Type = EProductType.Kayaks,
                     Stock = 1,
                     PhotoFileName = "shutterstock_495259978.jpg",
                     IntroducedAt = DateTimeOffset.Now.AddMonths(-1)
